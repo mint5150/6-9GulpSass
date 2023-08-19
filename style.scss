@@ -1,0 +1,503 @@
+@charset "utf-8";
+$backColor: #fff;
+$back-color2: #d0dfea;
+$base-color: #6ba7eb;
+$light-color: #e3f2fd;
+$dark-color: #333;
+$highlight-color: #8c8c8c;
+$text-color: #fff;
+
+@mixin flex-center() {
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  max-width: 1100px;
+  margin:0 auto;
+}
+
+section {
+  padding-top: 50px;
+}
+
+.section-title {
+  font-size: 40px;
+  letter-spacing: 10px;
+  text-align: center;
+}
+
+/*ヘッダー*/
+header {
+  background-color: $backColor;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+  .header-nav {
+    @include flex-center();
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    padding: 15px 0px;
+    color: #777;
+  }
+
+  .contact {
+    color: $dark-color;
+    background-color: $base-color;
+    font-size: 12px;
+    padding: 12px 14px;
+
+    &:hover {
+      color: $dark-color;
+      transition: all 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: $text-color;
+
+      &:hover {
+        color: $dark-color;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+main {
+  padding-top: 78px;
+
+  /*キービジュアル*/
+  section.keyvisual {
+    padding-top: 0px;
+  }
+
+  .keyvisual-inner {
+    background-image: url("../img/keyvisual/keyvisual.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 400px 0px;
+    width: 100%;
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 65px;
+      font-weight: 700;
+      color: $base-color;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: $text-color;
+      text-align: center;
+    }
+  }
+
+  /*ワークスセクション*/
+  .work {
+    background-color: $light-color;
+    padding-top: 50px;
+
+    .work-inner {
+      @include flex-center();
+      justify-content: space-around;
+
+      .work-left {
+        flex-basis: 40%;
+        text-align: center;
+
+        img {
+          width: 250px;
+        }
+      }
+
+      .work-right {
+        flex-basis: 60%;
+        text-align: center;
+
+        .work-title {
+          font-size: 40px;
+          letter-spacing: 10px;
+          margin-top: 20px;
+          text-align: center;
+          width: 650px;
+        }
+
+        .work-text {
+          font-size: 15px;
+          line-height: 18px;
+          word-break: break-all;
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+
+  /*スキルズセクション*/
+  section.skills {
+    padding-bottom: 70px;
+  }
+
+  .skills-contener {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    .skills img {
+      width: 300px;
+      height: 300px;
+      opacity:0.7;
+      transition: all 0.7s;
+
+      &:hover {
+        opacity:1.0;
+      }
+    }
+
+    .skills:not(:nth-child(3n)) {
+      margin-right: 100px;
+    }
+
+    .skills:nth-child(n+4) {
+      margin-top: 100px;
+    }
+  }
+
+  /*プランセクション*/
+  section.plan {
+    padding-bottom: 50px;
+    background-color: $back-color2;
+
+    .table {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+
+      table {
+        width: 100%;
+
+        th,td {
+          padding: 10px;
+          font-size: 16px;
+          line-height: 26px;
+          text-align: center;
+        }
+
+        th:nth-child(n+2),td {
+          border-left: 2px solid $backColor;
+        }
+
+        th {
+          font-weight: bold;
+        }
+
+        tr:nth-last-child(odd) {
+          background-color: $backColor;
+        }
+
+        tr:nth-last-child(even) {
+          background-color: #e0efff;
+        }
+
+        tr:first-child {
+          background-color: $base-color;
+        }
+      }
+    }
+  }
+
+  /*SNSセクション*/
+  .sns-nav {
+    background-color: $light-color;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    .sns-icons {
+      display: flex;
+      justify-content: center;
+
+      .icons {
+        width: 185px;
+        color: $highlight-color;
+        font-size: 40px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        overflow: hidden;
+        text-align: center;
+        transition: all 0.5s;
+
+        &:hover {
+          background-color: $backColor;
+        }
+
+        a {
+          color: $highlight-color;
+        }
+      }
+    }
+  }
+}
+
+/*フッター*/
+footer {
+  background-color: #cfd8dc;
+
+  .footer-inner {
+    display: flex;
+    justify-content: right;
+
+    .copy {
+      padding-top: 20px;
+      padding-bottom: 25px;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      margin-right: 100px;
+    }
+  }
+}
+
+.openbtn1 {
+  display: none;
+}
+
+/*ハンバーガーメニュー*/
+.openbtn1{
+  position: relative;
+  background: $backColor;
+  cursor: pointer;
+  width: 50px;
+  height:40px;
+  border-radius: 5px;
+  border: solid 1px #bcbcbc;
+
+  span{
+    display: inline-block;
+    transition: all .4s;
+    position: absolute;
+    left: 11px;
+    height: 3px;
+    border-radius: 2px;
+    background: #bcbcbc;
+    width: 58%;
+
+    &:nth-of-type(1) {
+      top: 10px;
+    }
+
+    &:nth-of-type(2) {
+      top:19px;
+    }
+
+    &:nth-of-type(3) {
+      top: 29px;
+    }
+  }
+
+  .active span:nth-of-type(1) {
+    top: 14px;
+    left: 9px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 60%;
+  }
+
+  .active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .active span:nth-of-type(3) {
+    top: 26px;
+    left: 10px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 60%;
+  }
+}
+
+@media screen and (min-width:768px) and ( max-width:1199px) {
+  .inner {
+    width: 97%;
+  }
+
+  /*ヘッダー*/
+  .header-nav {
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+
+  /*キービジュアル*/
+  section.keyvisual .keyvisual-inner {
+    background-size: cover;
+    padding: 250px 0px;
+  }
+
+  /*ワークスセクション*/
+  section.work {
+    padding-bottom: 50px;
+
+    .work-inner {
+      display: block;
+
+      .work-right {
+        margin: 0 15px;
+
+        .work-title {
+          width: 100%;
+        }
+
+        .work-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*スキルズセクション*/
+  main .skills-contener {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  main .skills-contener .skills {
+    text-align: center;
+
+    /*pc版の打消し*/
+    &:nth-child(n+4) {
+      margin-top: 0px;
+    }
+
+    /*pc版の打消し*/
+    &:not(:nth-child(3n)) {
+      margin-right: 0px;
+    }
+
+    &:nth-child(3n+4) {
+      margin-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    width: 97%;
+  }
+
+  /*ヘッダー*/
+  .header-nav {
+    display: block;
+    overflow: hidden;
+    margin: 0 10px;
+
+    .contact {
+      display: none;
+    }
+
+    .openbtn1 {
+      display: block;
+      float: right;
+      line-height: 78px;
+      margin-top: 0px;
+      margin-right: 10px;
+    }
+  }
+
+  /*キービジュアル*/
+  section.keyvisual .keyvisual-inner {
+    background-size: cover;
+    padding: 200px 0px;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  /*ワークスセクション*/
+  section.work {
+    padding-bottom: 60px;
+
+    .work-inner {
+      display: block;
+
+      .work-right {
+        margin: 0 15px;
+
+        .work-title {
+          width: 100%;
+        }
+
+        .work-text {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*スキルズセクション*/
+
+  main .skills-contener {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  main .skills-contener .skills {
+    text-align: center;
+
+    /*pc版の打消し*/
+    &:nth-child(n+4) {
+      margin-top: 0px;
+    }
+
+    /*pc版の打消し*/
+    &:not(:nth-child(3n)) {
+      margin-right: 0px;
+    }
+
+    &:nth-child(3n+4) {
+      margin-top: 70px;
+    }
+  }
+
+  /*プランセクション*/
+  th {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  td {
+    font-size: 12px;
+  }
+
+  /*SNSセクション*/
+  .sns-nav {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .sns-inner {
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+      .sns-icons {
+        display: block;
+        margin: 0 15px;
+
+        .icons {
+          width: 100%;
+          padding-top: 50px;
+          padding-bottom: 50px;
+        }
+      }
+    }
+  }
+
+  /*フッター*/
+  .copy {
+    margin-right: 10px;
+  }
+}
