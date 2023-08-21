@@ -105,7 +105,7 @@ main .work .work-inner .work-right .work-title {
   letter-spacing: 10px;
   margin-top: 20px;
   text-align: center;
-  width: 650px;
+  width: 100%;
 }
 main .work .work-inner .work-right .work-text {
   font-size: 15px;
@@ -193,6 +193,7 @@ main .sns-nav .sns-icons .icons:hover {
 }
 main .sns-nav .sns-icons .icons a {
   color: #8c8c8c;
+  text-decoration: none;
 }
 
 /*フッター*/
@@ -377,11 +378,11 @@ footer .footer-inner .copy {
     margin-top: 70px;
   }
   /*プランセクション*/
-  th {
+  main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;
   }
-  td {
+  main section.plan .table table td {
     font-size: 12px;
   }
   /*SNSセクション*/
