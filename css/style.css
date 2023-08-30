@@ -310,6 +310,10 @@ footer .footer-inner .copy {
   main .skills-contener .skills:nth-child(3n+4) {
     margin-top: 80px;
   }
+  /*プランセクション*/
+  main section.plan div.inner {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 767px) {
   .inner {
@@ -378,6 +382,9 @@ footer .footer-inner .copy {
     margin-top: 70px;
   }
   /*プランセクション*/
+  main section.plan div.inner {
+    width: 100%;
+  }
   main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;

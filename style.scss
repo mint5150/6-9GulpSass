@@ -379,6 +379,13 @@ footer {
       margin-top: 80px;
     }
   }
+
+  /*プランセクション*/
+  main section.plan {
+    div.inner {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -466,6 +473,12 @@ footer {
   }
 
   /*プランセクション*/
+  main section.plan {
+    div.inner {
+      width: 100%;
+    }
+  }
+
   main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;
