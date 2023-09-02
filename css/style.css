@@ -378,9 +378,6 @@ footer .footer-inner .copy {
     margin-top: 70px;
   }
   /*プランセクション*/
-  main section.plan div.inner {
-    width: 100%;
-  }
   main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;
