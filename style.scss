@@ -469,12 +469,15 @@ footer {
   main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;
+    padding: 0px;
   }
 
   main section.plan .table table td {
     font-size: 12px;
+    padding: 0px;
   }
-  
+
+  main section.plan .table table th, main section.plan .table table td
 
   /*SNSセクション*/
   .sns-nav {

@@ -381,24 +381,25 @@ footer .footer-inner .copy {
   main section.plan .table table th {
     font-size: 14px;
     line-height: 22px;
+    padding: 0px;
   }
   main section.plan .table table td {
     font-size: 12px;
+    padding: 0px;
   }
-  /*SNSセクション*/
-  .sns-nav {
+  main section.plan .table table th, main section.plan .table table td .sns-nav {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  .sns-nav .sns-inner {
+  main section.plan .table table th .sns-inner, main section.plan .table table td .sns-nav .sns-inner {
     padding-top: 0px;
     padding-bottom: 0px;
   }
-  .sns-nav .sns-inner .sns-icons {
+  main section.plan .table table th .sns-inner .sns-icons, main section.plan .table table td .sns-nav .sns-inner .sns-icons {
     display: block;
     margin: 0 15px;
   }
-  .sns-nav .sns-inner .sns-icons .icons {
+  main section.plan .table table th .sns-inner .sns-icons .icons, main section.plan .table table td .sns-nav .sns-inner .sns-icons .icons {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
